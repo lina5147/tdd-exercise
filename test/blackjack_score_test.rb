@@ -18,27 +18,36 @@ describe 'Blackjack Score' do
     score = blackjack_score(hand)
 
     # Assert
-    expect(time).must_equal 7
+    expect(score).must_equal 7
 
   end
 
   it 'facecards have values calculated correctly' do
 
-  end
+    score = blackjack_score(["K", 10])
+    expect(score).must_equal 20
 
-  it 'calculates aces as 11 where it does not go over 21' do
+    score = blackjack_score(["J", 10])
+    expect(score).must_equal 20
 
-  end
-
-  it 'calculates aces as 1, if an 11 would cause the score to go over 21' do
-
-  end
-
-  it 'raises an ArgumentError for invalid cards' do
+    score = blackjack_score(["Q", 10])
+    expect(score).must_equal 20
 
   end
-
-  it 'raises an ArgumentError for scores over 21' do
-
-  end
+  #
+  # it 'calculates aces as 11 where it does not go over 21' do
+  #
+  # end
+  #
+  # it 'calculates aces as 1, if an 11 would cause the score to go over 21' do
+  #
+  # end
+  #
+  # it 'raises an ArgumentError for invalid cards' do
+  #
+  # end
+  #
+  # it 'raises an ArgumentError for scores over 21' do
+  #
+  # end
 end
