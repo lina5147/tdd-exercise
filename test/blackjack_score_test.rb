@@ -24,13 +24,13 @@ describe 'Blackjack Score' do
 
   it 'facecards have values calculated correctly' do
 
-    score = blackjack_score(["K", 10])
+    score = blackjack_score(["King", 10])
     expect(score).must_equal 20
 
-    score = blackjack_score(["J", 10])
+    score = blackjack_score(["Jack", 10])
     expect(score).must_equal 20
 
-    score = blackjack_score(["Q", 10])
+    score = blackjack_score(["Queen", 10])
     expect(score).must_equal 20
 
   end
