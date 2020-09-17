@@ -61,6 +61,18 @@ describe 'Blackjack Score' do
 
   end
 
+  it 'calculates multiple aces in the hand' do
+
+    score = blackjack_score(["Ace", "Ace", 4])
+    expect(score).must_equal 16
+
+    score = blackjack_score(["Ace", "Ace", "Ace", 10])
+    expect(score).must_equal 13
+
+    score = blackjack_score(["Ace", "Ace", "Ace", "Ace", "Jack"])
+    expect(score).must_equal 14
+
+  end
   it 'raises an ArgumentError for invalid number of cards' do
 
     expect {
